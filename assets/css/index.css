@@ -1,0 +1,18 @@
+.divIzq{
+    background-color: #1B2A6D;
+}
+
+.contMenu{
+    background-color: #1B2A6D;
+    border-color: gray;
+    border-width: 5px;
+}
+
+.contenedor1{
+    min-height: calc(100vh - 120px);
+}
+
+.alineacion-centro{
+    text-align: center;
+    
+}

@@ -13,18 +13,25 @@
   <nav class="navbar navbar-expand-lg navbar-dark barra-navegacion shadow-sm fixed-top">
     <div class="container-fluid px-4">
       <a class="navbar-brand fw-bold fs-3" href="#">M-Tec</a>
-      <div class="d-flex gap-3 align-items-center">
-        <button class="btn btn-outline-light">Inicio</button>
-        <a href="crm.html" class="btn btn-light fw-bold text-primary shadow-sm">CRM-Tec</a>
-        
-        <button class="btn btn-link text-white p-0 ms-2" id="bd-theme-toggle" type="button" aria-expanded="false" aria-label="Cambiar tema">
-          <svg class="bi theme-icon-active icono-luna" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.218 7.277a7.15 7.15 0 0 0 3.06-.683.768.768 0 0 1 .888.162 7.12 7.12 0 0 1 1.574 3.03.768.768 0 0 1-.81 1.002A11.305 11.305 0 0 1 7.23 16C3.237 16 0 12.763 0 8.77 0 4.91 3.105 1.766 7.02.484a.768.768 0 0 1 .18-.016zm.41 1.48A9.33 9.33 0 0 0 5 8.77c0 2.398.9 4.587 2.37 6.242A10.317 10.317 0 0 0 10.7 13.5a8.216 8.216 0 0 1-3.665-.877c-2.112-1.225-3.56-3.47-3.56-5.853 0-2.26.835-4.33 2.212-5.91zm0 0z"/>
-          </svg>
-          <svg class="bi d-none theme-icon-active icono-sol" width="24" height="24" fill="#F5A623" viewBox="0 0 16 16">
-            <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2a.5.5 0 0 1 .5-.5zM11.778 3.32a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L11.778 3.32zm-7.356 8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707l-1.414-1.414a.5.5 0 0 1 0-.707zm5.558 0a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L9.98 11.88zm-7.356-8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.624 3.32zm13.376 4.68a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm-15 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
-          </svg>
-        </button>
+      
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="menuNavegacion">
+        <div class="d-flex gap-3 align-items-center flex-column flex-lg-row">
+          <a href="index.html" class="btn btn-outline-light w-100 text-center">Inicio</a>
+          <a href="crm.html" class="btn btn-light fw-bold text-primary shadow-sm w-100 text-center">CRM-Tec</a>
+          
+          <button class="btn btn-link text-white p-0 ms-lg-2 mt-2 mt-lg-0" id="bd-theme-toggle" type="button" aria-expanded="false" aria-label="Cambiar tema">
+            <svg class="bi theme-icon-active icono-luna" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.218 7.277a7.15 7.15 0 0 0 3.06-.683.768.768 0 0 1 .888.162 7.12 7.12 0 0 1 1.574 3.03.768.768 0 0 1-.81 1.002A11.305 11.305 0 0 1 7.23 16C3.237 16 0 12.763 0 8.77 0 4.91 3.105 1.766 7.02.484a.768.768 0 0 1 .18-.016zm.41 1.48A9.33 9.33 0 0 0 5 8.77c0 2.398.9 4.587 2.37 6.242A10.317 10.317 0 0 0 10.7 13.5a8.216 8.216 0 0 1-3.665-.877c-2.112-1.225-3.56-3.47-3.56-5.853 0-2.26.835-4.33 2.212-5.91zm0 0z"/>
+            </svg>
+            <svg class="bi d-none theme-icon-active icono-sol" width="24" height="24" fill="#F5A623" viewBox="0 0 16 16">
+              <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2a.5.5 0 0 1 .5-.5zM11.778 3.32a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L11.778 3.32zm-7.356 8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707l-1.414-1.414a.5.5 0 0 1 0-.707zm5.558 0a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L9.98 11.88zm-7.356-8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.624 3.32zm13.376 4.68a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm-15 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
@@ -32,24 +39,24 @@
   <main class="container-fluid p-0 pt-5 mt-3">
     
     <div class="row g-0 contenedor1">
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-start flex-column p-5 bg-body">
-        <h1 class="display-5 fw-bold mb-4">Bienvenid@ a <span class="texto-destacado">M-Tec</span></h1>
+      <div class="col-12 col-md-6 d-flex justify-content-center align-items-start flex-column p-4 p-md-5 bg-body">
+        <h1 class="display-5 fw-bold mb-4 text-center text-md-start w-100">Bienvenid@ a <span class="texto-destacado">M-Tec</span></h1>
         
-        <p class="fs-5 text-secondary lh-lg mb-4">
+        <p class="fs-5 text-secondary lh-lg mb-4 text-center text-md-start">
           Somos una empresa mexicana dedicada a la <strong>innovación</strong> y la implementación de soluciones tecnológicas. Nacimos a partir de la necesidad de adaptarse al desenfrenado crecimiento de las nuevas tecnologías.
         </p>
-        <p class="fs-5 text-secondary lh-lg mb-4">
+        <p class="fs-5 text-secondary lh-lg mb-4 text-center text-md-start">
           Es por eso que ofrecemos a nuestros clientes una amplia gama de <strong>servicios</strong>, desde el desarrollo de software personalizado hasta la consultoría tecnológica, pasando por la implementación de sistemas de gestión empresarial y la integración de soluciones en la nube. 
         </p>
-        <p class="fs-5 text-secondary lh-lg">
-          Nuestro equipo de expertos altamente capacitados se compromete a brindar un servicio excepcional que cumpla con las necesidades específicas de cada cliente, ayudándolos a llevar tu visión a niveles inimaginables.
+        <p class="fs-5 text-secondary lh-lg text-center text-md-start">
+          Nuestro equipo de expertos altamente capacitados se compromete a brindar un servicio excepcional que cumpla con las necesidades específicas de cada cliente, ayudándolos a llevar su visión a niveles inimaginables.
         </p>
       </div>
 
-      <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-5">
-        <div class="card bg-dark text-white border-0 shadow-lg" style="border-radius: 1rem; max-width: 500px;">
-          <div class="card-body text-center p-5">
-            <h2 class="card-title fw-bold mb-4">Llevamos tu visión al siguiente nivel.</h2>
+      <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-4 p-md-5">
+        <div class="card bg-dark text-white border-0 shadow-lg" style="border-radius: 1rem; max-width: 500px; width: 100%;">
+          <div class="card-body text-center p-4 p-md-5">
+            <h2 class="card-title fw-bold mb-4 fs-3 fs-md-2">Llevamos tu visión al siguiente nivel.</h2>
             <img src="assets/img/M-Team.jpeg" class="img-fluid rounded" alt="Logo de CRM-Tec">
           </div>
         </div>
@@ -57,13 +64,13 @@
     </div>
 
     <div class="row g-0 justify-content-center align-items-center separador-titulo shadow-sm">
-      <div class="col-12 text-center py-4 py-md-5">
+      <div class="col-12 text-center py-4 py-md-5 px-3">
         <h2 class="display-6 fw-bold text-body mb-0">¿Cómo trabajamos?</h2>
       </div>
     </div>
 
     <div class="row g-0 contenedor-paso border-bottom">
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-start flex-column p-5 bg-body">
+      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
         <h3 class="fw-bold mb-3 texto-destacado">
           1. Entendemos tu negocio 
           <span class="d-block text-secondary fs-5 fw-normal mt-1">(Análisis y Consultoría)</span>
@@ -72,9 +79,9 @@
           No creemos en las soluciones genéricas. Nuestro primer paso es analizar a fondo tus procesos para identificar áreas de oportunidad y cuellos de botella. Diseñamos una estrategia tecnológica a la medida, alineada exactamente con los objetivos y la visión de tu empresa.
         </p>
       </div>
-      <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-5">
+      <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-4 p-md-5">
         <div class="card bg-dark text-white border-0 shadow-lg" style="border-radius: 1rem; max-width: 400px; width: 100%;">
-          <div class="card-body text-center p-5">
+          <div class="card-body text-center p-4 p-md-5">
             <div class="mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" class="icono-paso" fill="#F5A623" viewBox="0 0 16 16">
                 <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
@@ -87,9 +94,9 @@
     </div>
 
     <div class="row g-0 contenedor-paso border-bottom flex-column-reverse flex-md-row">
-      <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-5">
+      <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-4 p-md-5">
         <div class="card bg-dark text-white border-0 shadow-lg" style="border-radius: 1rem; max-width: 400px; width: 100%;">
-          <div class="card-body text-center p-5">
+          <div class="card-body text-center p-4 p-md-5">
             <div class="mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" class="icono-paso" fill="#F5A623" viewBox="0 0 16 16">
                 <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
@@ -99,7 +106,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-start flex-column p-5 bg-body">
+      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
         <h3 class="fw-bold mb-3 texto-destacado">
           2. Construimos la solución
           <span class="d-block text-secondary fs-5 fw-normal mt-1">(Desarrollo e Integración)</span>
@@ -111,7 +118,7 @@
     </div>
 
     <div class="row g-0 contenedor-paso">
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-start flex-column p-5 bg-body">
+      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
         <h3 class="fw-bold mb-3 texto-destacado">
           3. Despegue y Evolución
           <span class="d-block text-secondary fs-5 fw-normal mt-1">(Implementación y Soporte)</span>
@@ -120,9 +127,9 @@
           Nuestro compromiso va más allá de entregar un proyecto. Aseguramos una transición fluida, garantizando que cada herramienta funcione a la perfección en tu entorno real. Te acompañamos de cerca para que tu empresa no solo alcance el siguiente nivel, sino que siga creciendo de forma imparable.
         </p>
       </div>
-      <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-5">
+      <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-4 p-md-5">
         <div class="card bg-dark text-white border-0 shadow-lg" style="border-radius: 1rem; max-width: 400px; width: 100%;">
-          <div class="card-body text-center p-5">
+          <div class="card-body text-center p-4 p-md-5">
             <div class="mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" class="icono-paso" fill="#F5A623" viewBox="0 0 16 16">
                 <path d="M15.228 2.228a.5.5 0 0 0-.228-.228A28.5 28.5 0 0 0 8.001 1c-2.454 0-4.77.34-6.84 1-.16.05-.31.14-.43.26-.12.12-.21.27-.26.43-.66 2.07-1 4.38-1 6.84 0 2.45.34 4.77 1 6.84.05.16.14.31.26.43.12.12.27.21.43.26 2.07.66 4.39 1 6.84 1 2.45 0 4.77-.34 6.84-1 .16-.05.31-.14.43-.26.12-.12.21-.27.26-.43.66-2.07 1-4.38 1-6.84 0-2.45-.34-4.77-1-6.84zM7.5 13.5a1 1 0 1 1 1-1 1 1 0 0 1-1 1zm2-3.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1-3a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
@@ -135,18 +142,18 @@
     </div>
 
     <div class="row g-0 justify-content-center align-items-center py-5" style="background-color: #111a43;">
-      <div class="col-12 col-md-8 text-center p-5">
-        <h2 class="display-5 fw-bold text-white mb-4">¿Listo para transformar tu empresa?</h2>
+      <div class="col-12 col-md-8 text-center p-4 p-md-5">
+        <h2 class="display-5 fw-bold text-white mb-4 fs-2 fs-md-1">¿Listo para transformar tu empresa?</h2>
         <p class="fs-5 text-light opacity-75 mb-5 px-md-5">
           Ponte en contacto con nuestro equipo de expertos. Escríbenos y descubre cómo podemos ayudarte a alcanzar tus objetivos tecnológicos con soluciones a la medida.
         </p>
         
-        <a href="mailto:M-TecAssistance@gmail.com" class="d-inline-flex align-items-center bg-white p-3 px-4 rounded-pill shadow text-decoration-none contact-hover">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#F5A623" class="bi bi-envelope-at-fill me-3" viewBox="0 0 16 16">
+        <a href="mailto:M-TecAssistance@gmail.com" class="d-inline-flex flex-column flex-sm-row align-items-center bg-white p-3 px-4 rounded-pill shadow text-decoration-none contact-hover">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#F5A623" class="bi bi-envelope-at-fill mb-2 mb-sm-0 me-sm-3" viewBox="0 0 16 16">
             <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"/>
             <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.544-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.509 0 .97.234 1.089.639h.043v-.119c0-.496.353-.843.819-.843.435 0 .741.28.741.815v2.378c0 .356.24.577.533.577.26 0 .47-.145.47-.43v-.867h.1ZM13.06 12.064c0-.521-.25-.867-.654-.867-.403 0-.649.346-.649.867v.52c0 .52.246.867.65.867.404 0 .654-.346.654-.867v-.52Z"/>
           </svg>
-          <span class="fs-4 fw-bold" style="color: #1B2A6D;">M-TecAssistance@gmail.com</span>
+          <span class="fs-5 fs-md-4 fw-bold text-wrap text-break" style="color: #1B2A6D; max-width: 100%;">M-TecAssistance@gmail.com</span>
         </a>
       </div>
     </div>
@@ -158,7 +165,6 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  
   <script src="assets/js/theme.js"></script>
 </body>
 

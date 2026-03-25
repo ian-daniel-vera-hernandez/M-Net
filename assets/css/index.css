@@ -76,3 +76,36 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
 }
+
+/* =========================================
+   AJUSTES DEL CARRUSEL DEL EQUIPO (M-TEC)
+   ========================================= */
+#carruselMTeam .carousel-item img {
+    /* Fija una altura estandarizada para todas las fotos */
+    height: 500px; 
+    
+    /* La magia: Llena el espacio sin estirar ni deformar la imagen */
+    object-fit: cover; 
+    
+    /* Asegura que el recorte se centre en la parte superior (para no cortar cabezas) */
+    object-position: center top; 
+}
+
+@media (max-width: 768px) {
+    #carruselMTeam .carousel-item img {
+        /* En celulares, la altura bajará a 250px o 300px automáticamente */
+        height: 300px; 
+    }
+}
+
+/* Efecto hover para las tarjetas de descarga de PDF */
+.doc-hover {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease;
+}
+
+.doc-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    border-color: #F5A623 !important; /* Resalta con tu color ámbar */
+    cursor: pointer;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <title>M-Net | Iniciar Sesión</title>
+</head>
+
+<body class="bg-body d-flex flex-column min-vh-100">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark barra-navegacion shadow-sm fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">M-Tec</a>
+      <div class="d-flex align-items-center">
+        <a href="index.html" class="btn btn-outline-light btn-sm me-3">Volver al Inicio</a>
+        <button class="btn btn-link text-white p-0" id="bd-theme-toggle" type="button" aria-expanded="false">
+          <svg class="bi theme-icon-active icono-luna" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.218 7.277a7.15 7.15 0 0 0 3.06-.683.768.768 0 0 1 .888.162 7.12 7.12 0 0 1 1.574 3.03.768.768 0 0 1-.81 1.002A11.305 11.305 0 0 1 7.23 16C3.237 16 0 12.763 0 8.77 0 4.91 3.105 1.766 7.02.484a.768.768 0 0 1 .18-.016zm.41 1.48A9.33 9.33 0 0 0 5 8.77c0 2.398.9 4.587 2.37 6.242A10.317 10.317 0 0 0 10.7 13.5a8.216 8.216 0 0 1-3.665-.877c-2.112-1.225-3.56-3.47-3.56-5.853 0-2.26.835-4.33 2.212-5.91zm0 0z"/>
+          </svg>
+          <svg class="bi d-none theme-icon-active icono-sol" width="20" height="20" fill="#F5A623" viewBox="0 0 16 16">
+            <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2a.5.5 0 0 1 .5-.5zM11.778 3.32a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L11.778 3.32zm-7.356 8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707l-1.414-1.414a.5.5 0 0 1 0-.707zm5.558 0a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L9.98 11.88zm-7.356-8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.624 3.32zm13.376 4.68a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm-15 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid flex-grow-1 d-flex justify-content-center align-items-center pt-5 mt-5">
+    
+    <div class="card shadow-lg border-0" style="max-width: 450px; width: 100%; border-radius: 1rem;">
+      <div class="card-body p-5">
+        
+        <div class="text-center mb-4">
+          <h2 class="fw-bold mb-2">Acceso a <span class="texto-destacado">M-Net</span></h2>
+          <p class="text-secondary">Ingresa tus credenciales para continuar</p>
+        </div>
+
+        <div id="errorAlert" class="alert alert-danger d-none" role="alert">
+          Correo o contraseña incorrectos.
+        </div>
+
+        <form id="loginForm">
+          <div class="mb-4">
+            <label for="emailInput" class="form-label fw-bold">Correo Electrónico</label>
+            <input type="email" class="form-control form-control-lg bg-body" id="emailInput" placeholder="usuario@empresa.com" required>
+          </div>
+          
+          <div class="mb-5">
+            <label for="passwordInput" class="form-label fw-bold">Contraseña</label>
+            <input type="password" class="form-control form-control-lg bg-body" id="passwordInput" placeholder="********" required>
+          </div>
+
+          <button type="submit" id="btnSubmit" class="btn btn-primary btn-lg w-100 fw-bold shadow-sm" style="background-color: #1B2A6D; border: none;">
+            Iniciar Sesión
+          </button>
+        </form>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+    // =========================================================
+    // ⚠️ REEMPLAZA ESTO CON TUS DATOS REALES DE SUPABASE ⚠️
+    // =========================================================
+    const SUPABASE_URL = 'https://exzjdesnqcjdloebpwth.supabase.co'; 
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV4empkZXNucWNqZGxvZWJwd3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE2MzY5OTAsImV4cCI6MjA4NzIxMjk5MH0.FHUiqpGbj_U_8zfb4i_BmmVQ-RN6ofQyCW27u74Ooz8';
+    
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const loginForm = document.getElementById('loginForm');
+    const emailInput = document.getElementById('emailInput');
+    const passwordInput = document.getElementById('passwordInput');
+    const errorAlert = document.getElementById('errorAlert');
+    const btnSubmit = document.getElementById('btnSubmit');
+
+    // =========================================================
+    // REPLICA DE LA FUNCIÓN DE JAVA: hashearContrasena()
+    // =========================================================
+    async function hashearContrasena(password) {
+      // Convertimos el string a bytes (equivalente a password.getBytes("UTF-8") en Java)
+      const msgBuffer = new TextEncoder().encode(password);
+      
+      // Aplicamos el hash SHA-256 (equivalente a MessageDigest en Java)
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      
+      // Convertimos los bytes a una cadena Hexadecimal
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      
+      return hashHex;
+    }
+
+    // Escuchar cuando el usuario envíe el formulario
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Conectando...';
+      errorAlert.classList.add('d-none');
+
+      const email = emailInput.value;
+      const passwordPlana = passwordInput.value;
+
+      try {
+        // Encriptamos la contraseña tal como lo hace Java
+        const passwordEncriptada = await hashearContrasena(passwordPlana);
+
+        // Hacemos la consulta a tu tabla pública 'usuarios'
+        const { data, error } = await supabase
+          .from('usuarios')
+          .select('*')
+          .eq('correo', email)
+          .eq('contrasena', passwordEncriptada);
+
+        if (error) throw error;
+
+       // Validamos si la base de datos devolvió algún registro
+        if (data && data.length > 0) {
+          const usuarioEncontrado = data[0];
+          console.log('¡Acceso autorizado!', usuarioEncontrado);
+          
+          // Guardamos los datos de la sesión para usarlos después
+          localStorage.setItem('usuarioMNet', JSON.stringify(usuarioEncontrado));
+          
+          // Redirigimos al index
+          window.location.href = 'index.html'; 
+        } else {
+          throw new Error('Credenciales inválidas');
+        }
+
+      } catch (error) {
+        console.error('Error de login:', error.message);
+        errorAlert.textContent = 'Correo o contraseña incorrectos.';
+        errorAlert.classList.remove('d-none');
+      } finally {
+        btnSubmit.disabled = false;
+        btnSubmit.textContent = 'Iniciar Sesión';
+      }
+    });
+  </script>
+</body>
+
+</html>

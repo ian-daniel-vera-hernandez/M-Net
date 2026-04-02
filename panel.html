@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/logo1_0.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <title>M-Net | Mi Panel</title>
+
+  <script>
+    if (!localStorage.getItem('usuarioMNet')) {
+      window.location.href = 'login.html';
+    }
+  </script>
+</head>
+
+<body class="bg-body d-flex flex-column min-vh-100">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark barra-navegacion shadow-sm fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-3 d-flex align-items-center" href="index.html">
+        <img src="assets/img/logo1_0.png" alt="Logo M-Tec" width="40" height="40" class="me-2 rounded-circle object-fit-cover bg-white">
+        M-Tec
+      </a>
+      
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="menuNavegacion">
+        <div class="d-flex gap-3 align-items-center flex-column flex-lg-row">
+          <a href="index.html" class="btn btn-outline-light px-4 text-center">Inicio</a>
+          <a href="crm.html" class="btn btn-light fw-bold text-primary shadow-sm px-4 text-center">CRM-Tec</a>
+          
+          <div id="authContainer" class="d-flex justify-content-center"></div>
+          
+          <button class="btn btn-link text-white p-0 ms-lg-2 mt-2 mt-lg-0" id="bd-theme-toggle" type="button" aria-expanded="false" aria-label="Cambiar tema">
+            <svg class="bi theme-icon-active icono-luna" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.218 7.277a7.15 7.15 0 0 0 3.06-.683.768.768 0 0 1 .888.162 7.12 7.12 0 0 1 1.574 3.03.768.768 0 0 1-.81 1.002A11.305 11.305 0 0 1 7.23 16C3.237 16 0 12.763 0 8.77 0 4.91 3.105 1.766 7.02.484a.768.768 0 0 1 .18-.016zm.41 1.48A9.33 9.33 0 0 0 5 8.77c0 2.398.9 4.587 2.37 6.242A10.317 10.317 0 0 0 10.7 13.5a8.216 8.216 0 0 1-3.665-.877c-2.112-1.225-3.56-3.47-3.56-5.853 0-2.26.835-4.33 2.212-5.91zm0 0z"/>
+            </svg>
+            <svg class="bi d-none theme-icon-active icono-sol" width="24" height="24" fill="#F5A623" viewBox="0 0 16 16">
+              <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2a.5.5 0 0 1 .5-.5zM11.778 3.32a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L11.778 3.32zm-7.356 8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707l-1.414-1.414a.5.5 0 0 1 0-.707zm5.558 0a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L9.98 11.88zm-7.356-8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.624 3.32zm13.376 4.68a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm-15 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container flex-grow-1 pt-5 mt-5">
+    
+    <div class="row mb-5">
+      <div class="col-12 text-center text-md-start">
+        <h1 class="fw-bold mb-2">Mi Panel M-Net</h1>
+        <p class="text-secondary fs-5" id="saludoPanel">Selecciona el servicio que deseas gestionar hoy.</p>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+      
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm panel-card border-top border-primary border-4" style="border-radius: 1rem;">
+          <div class="card-body p-4 text-center">
+            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#1B2A6D" class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+              </svg>
+            </div>
+            <h4 class="card-title fw-bold">CRM-Tec</h4>
+            <p class="card-text text-secondary mb-4">Gestiona tus contactos, tareas, inventario y consulta al asistente virtual MAI.</p>
+            
+            <a href="dashboard_crm.html" class="btn btn-primary w-100 fw-bold" style="background-color: #1B2A6D; border: none;">Acceder al CRM</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm opacity-75" style="border-radius: 1rem; background-color: #f8f9fa;">
+          <div class="card-body p-4 text-center">
+            <span class="badge bg-secondary mb-3">Próximamente</span>
+            <div class="bg-secondary bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3 d-block mx-auto" style="width: fit-content;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#6c757d" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+                <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z"/>
+              </svg>
+            </div>
+            <h4 class="card-title fw-bold text-muted">M-Cloud</h4>
+            <p class="card-text text-secondary mb-4">Almacenamiento y respaldo de documentos corporativos en la nube.</p>
+            <button class="btn btn-secondary w-100 fw-bold" disabled>No Disponible</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 border-0 shadow-sm opacity-75" style="border-radius: 1rem; background-color: #f8f9fa;">
+          <div class="card-body p-4 text-center">
+             <span class="badge bg-secondary mb-3">En Desarrollo</span>
+            <div class="bg-secondary bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3 d-block mx-auto" style="width: fit-content;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#6c757d" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
+                <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
+              </svg>
+            </div>
+            <h4 class="card-title fw-bold text-muted">M-Analytics</h4>
+            <p class="card-text text-secondary mb-4">Reportes avanzados y predicciones financieras impulsadas por IA.</p>
+            <button class="btn btn-secondary w-100 fw-bold" disabled>No Disponible</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4 mt-auto">
+    <div class="container px-3">
+        <p class="mb-1 fw-bold fs-5" style="color: #F5A623;">M-Tec &copy; 2026</p>
+        <small class="text-light opacity-75 d-block">Panel Administrativo de M-Net</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const authContainer = document.getElementById('authContainer');
+      const usuarioGuardado = localStorage.getItem('usuarioMNet');
+      const saludoPanel = document.getElementById('saludoPanel');
+
+      if (usuarioGuardado) {
+        const usuario = JSON.parse(usuarioGuardado);
+        const nombreMostrar = usuario.nombre || usuario.correo.split('@')[0];
+        
+        // Personaliza el texto del panel con el nombre del usuario
+        saludoPanel.innerHTML = `¡Qué bueno verte, <strong>${nombreMostrar}</strong>! Selecciona el servicio que deseas gestionar hoy.`;
+
+        // Genera el botón con el menú desplegable
+        authContainer.innerHTML = `
+          <div class="dropdown w-100 text-center">
+            <button class="btn btn-success dropdown-toggle fw-bold w-100 shadow-sm px-4" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="min-width: 140px;">
+               Bienvenid@, ${nombreMostrar}
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end w-100 text-center shadow">
+              <li><h6 class="dropdown-header">Mi Cuenta M-Net</h6></li>
+              <li><a class="dropdown-item active" href="panel.html">Ir al Panel</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger fw-bold" href="#" id="btnLogout">Cerrar Sesión</a></li>
+            </ul>
+          </div>
+        `;
+
+        // Lógica para cerrar sesión
+        document.getElementById('btnLogout').addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('usuarioMNet');
+          window.location.href = 'login.html'; // Lo mandamos de regreso al login
+        });
+      }
+    });
+  </script>
+
+  <style>
+    .panel-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .panel-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    [data-bs-theme="dark"] .panel-card {
+      background-color: #2b2b2b;
+    }
+    [data-bs-theme="dark"] .opacity-75 {
+      background-color: #1a1a1a !important;
+      opacity: 0.5 !important;
+    }
+  </style>
+</body>
+
+</html>

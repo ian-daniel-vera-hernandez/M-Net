@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/logo1_0.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <title>CRM-Tec | Mis Registros</title>
+
+  <script>
+    if (!localStorage.getItem('usuarioMNet')) {
+      window.location.href = 'login.html';
+    }
+  </script>
+</head>
+
+<body class="bg-body d-flex flex-column min-vh-100">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark barra-navegacion shadow-sm fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-3 d-flex align-items-center" href="index.html">
+        <img src="assets/img/logo1_0.png" alt="Logo M-Tec" width="40" height="40" class="me-2 rounded-circle object-fit-cover bg-white">
+        M-Tec
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="menuNavegacion">
+        <div class="d-flex gap-3 align-items-center flex-column flex-lg-row">
+          <a href="panel.html" class="btn btn-outline-light px-4 text-center">Volver al Panel</a>
+          <div id="authContainer" class="d-flex justify-content-center"></div>
+          
+          <button class="btn btn-link text-white p-0 ms-lg-2 mt-2 mt-lg-0" id="bd-theme-toggle" type="button" aria-expanded="false" aria-label="Cambiar tema">
+            <svg class="bi theme-icon-active icono-luna" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.218 7.277a7.15 7.15 0 0 0 3.06-.683.768.768 0 0 1 .888.162 7.12 7.12 0 0 1 1.574 3.03.768.768 0 0 1-.81 1.002A11.305 11.305 0 0 1 7.23 16C3.237 16 0 12.763 0 8.77 0 4.91 3.105 1.766 7.02.484a.768.768 0 0 1 .18-.016zm.41 1.48A9.33 9.33 0 0 0 5 8.77c0 2.398.9 4.587 2.37 6.242A10.317 10.317 0 0 0 10.7 13.5a8.216 8.216 0 0 1-3.665-.877c-2.112-1.225-3.56-3.47-3.56-5.853 0-2.26.835-4.33 2.212-5.91zm0 0z"/>
+            </svg>
+            <svg class="bi d-none theme-icon-active icono-sol" width="24" height="24" fill="#F5A623" viewBox="0 0 16 16">
+              <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2a.5.5 0 0 1 .5-.5zM11.778 3.32a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L11.778 3.32zm-7.356 8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707l-1.414-1.414a.5.5 0 0 1 0-.707zm5.558 0a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L9.98 11.88zm-7.356-8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.624 3.32zm13.376 4.68a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm-15 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container-fluid flex-grow-1 pt-5 mt-5 px-4 px-md-5">
+    
+    <div class="row mb-4 align-items-end">
+      <div class="col-12 col-md-6">
+        <h1 class="fw-bold mb-1">Mis Registros</h1>
+        <p class="text-secondary mb-3 mb-md-0">Selecciona el módulo que deseas consultar.</p>
+      </div>
+      
+      <div class="col-12 col-md-6 text-md-end d-flex justify-content-md-end align-items-center gap-3">
+        <span id="loader" class="text-primary fw-bold d-none">
+          <span class="spinner-border spinner-border-sm me-2" role="status"></span>Cargando...
+        </span>
+        
+        <select id="selectorTabla" class="form-select form-select-lg shadow-sm w-auto border-primary" style="min-width: 200px;">
+          <option value="tareas" selected>📋 Tareas</option>
+          <option value="productos">📦 Productos (Inventario)</option>
+          <option value="contactos">👥 Contactos</option>
+          <option value="balance">💰 Balance del Negocio</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card border-0 shadow-sm" style="border-radius: 1rem; overflow: hidden;">
+      <div class="card-body p-0">
+        <div class="table-responsive" style="max-height: 60vh;">
+          <table class="table table-hover align-middle mb-0">
+            <thead class="table-dark" style="position: sticky; top: 0; z-index: 1;">
+              <tr id="encabezadosTabla">
+                <th>Cargando estructura...</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+              </tbody>
+          </table>
+        </div>
+        <div id="mensajeVacio" class="text-center p-5 d-none">
+          <h5 class="text-secondary mb-0" id="textoMensajeVacio">No se encontraron registros.</h5>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="assets/js/theme.js"></script>
+  
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+    // ⚠️ RECUERDA PONER TUS CLAVES AQUÍ
+    const SUPABASE_URL = 'https://exzjdesnqcjdloebpwth.supabase.co'; 
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV4empkZXNucWNqZGxvZWJwd3RoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE2MzY5OTAsImV4cCI6MjA4NzIxMjk5MH0.FHUiqpGbj_U_8zfb4i_BmmVQ-RN6ofQyCW27u74Ooz8';
+    
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    document.addEventListener("DOMContentLoaded", async () => {
+      const usuarioActivo = JSON.parse(localStorage.getItem('usuarioMNet'));
+      const nombreMostrar = usuarioActivo.nombre || usuarioActivo.correo.split('@')[0];
+      
+      document.getElementById('authContainer').innerHTML = `
+        <div class="dropdown text-center">
+          <button class="btn btn-success dropdown-toggle fw-bold shadow-sm" type="button" data-bs-toggle="dropdown">
+             👤 ${nombreMostrar}
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow">
+            <li><a class="dropdown-item text-danger fw-bold" href="#" id="btnLogout">Cerrar Sesión</a></li>
+          </ul>
+        </div>
+      `;
+
+      document.getElementById('btnLogout').addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.removeItem('usuarioMNet');
+        window.location.href = 'login.html';
+      });
+
+      const selector = document.getElementById('selectorTabla');
+      const loader = document.getElementById('loader');
+      const encabezados = document.getElementById('encabezadosTabla');
+      const cuerpo = document.getElementById('cuerpoTabla');
+      const mensajeVacio = document.getElementById('mensajeVacio');
+      const textoMensajeVacio = document.getElementById('textoMensajeVacio');
+
+      let miIdNegocio = null; 
+
+      // 1. Obtener el ID del negocio en segundo plano (por si elige Balance o Contactos)
+      async function obtenerMiNegocio() {
+        try {
+          const { data: adminData } = await supabase
+            .from('admin')
+            .select('id_admin')
+            .eq('id_persona', usuarioActivo.id_persona)
+            .single();
+
+          if (adminData) {
+            const { data: negocioData } = await supabase
+              .from('negocio')
+              .select('id_negocio')
+              .eq('id_admin', adminData.id_admin)
+              .single();
+
+            if (negocioData) {
+              miIdNegocio = negocioData.id_negocio;
+            }
+          }
+        } catch (error) {
+          console.log("El usuario no tiene negocio o no es admin, pero aún puede ver sus tareas/productos.");
+        }
+        
+        // Cargamos la tabla que esté seleccionada por defecto (Tareas)
+        cargarDatosTabla(selector.value);
+      }
+
+      // 2. Carga dinámica e "inteligente" de tablas
+      async function cargarDatosTabla(nombreTabla) {
+        loader.classList.remove('d-none');
+        mensajeVacio.classList.add('d-none');
+        cuerpo.innerHTML = '';
+        encabezados.innerHTML = '<th>Cargando...</th>';
+
+        let filtroColumna = '';
+        let filtroValor = null;
+
+        // AQUÍ ESTÁ LA MAGIA: Decidimos la llave foránea según la tabla
+        if (nombreTabla === 'tareas') {
+            filtroColumna = 'id_usuario';
+            filtroValor = usuarioActivo.id_persona;
+        } else if (nombreTabla === 'productos_servicios') {
+            filtroColumna = 'id_persona';
+            filtroValor = usuarioActivo.id_persona;
+        } else if (nombreTabla === 'balance' || nombreTabla === 'contactos') {
+            if (!miIdNegocio) {
+                mostrarError("Necesitas ser administrador de un negocio para ver este módulo.");
+                return;
+            }
+            filtroColumna = 'id_negocio';
+            filtroValor = miIdNegocio;
+        }
+
+        try {
+          const { data: registros, error } = await supabase
+            .from(nombreTabla)
+            .select('*')
+            .eq(filtroColumna, filtroValor);
+
+          if (error) throw error;
+
+          if (!registros || registros.length === 0) {
+            encabezados.innerHTML = '<th>Aviso</th>';
+            textoMensajeVacio.textContent = `Aún no tienes registros en el módulo de ${nombreTabla.replace('_', ' ')}.`;
+            mensajeVacio.classList.remove('d-none');
+            loader.classList.add('d-none');
+            return;
+          }
+
+          const columnasOriginales = Object.keys(registros[0]);
+          // Filtramos columnas de ID internos para no saturar al cliente
+          const columnasVisibles = columnasOriginales.filter(col => !col.startsWith('id_')); 
+          
+          encabezados.innerHTML = '';
+          columnasVisibles.forEach(columna => {
+            const tituloLimpio = columna.replace(/_/g, ' ').toUpperCase();
+            encabezados.innerHTML += `<th class="px-4 py-3">${tituloLimpio}</th>`;
+          });
+
+          registros.forEach(fila => {
+            let tr = document.createElement('tr');
+            columnasVisibles.forEach(col => {
+              tr.innerHTML += `<td class="px-4 py-3 text-secondary">${fila[col] !== null ? fila[col] : '-'}</td>`;
+            });
+            cuerpo.appendChild(tr);
+          });
+
+        } catch (error) {
+          console.error(`Error al cargar la tabla ${nombreTabla}:`, error);
+          mostrarError("Error de lectura. Verifica los permisos RLS en Supabase para esta tabla.");
+        } finally {
+          loader.classList.add('d-none');
+        }
+      }
+
+      function mostrarError(mensaje) {
+        encabezados.innerHTML = '<th>Error</th>';
+        cuerpo.innerHTML = '';
+        textoMensajeVacio.innerHTML = `<span class="text-danger">❌ ${mensaje}</span>`;
+        mensajeVacio.classList.remove('d-none');
+        loader.classList.add('d-none');
+      }
+
+      selector.addEventListener('change', (e) => {
+        cargarDatosTabla(e.target.value);
+      });
+
+      // Iniciamos el proceso
+      obtenerMiNegocio();
+    });
+  </script>
+</body>
+</html>

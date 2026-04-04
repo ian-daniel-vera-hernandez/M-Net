@@ -181,14 +181,17 @@
               query = query.eq('id_persona', usuarioActivo.id_persona);
               
           } else if (nombreTabla === 'usuarios') {
-              query = query.eq('id_propietario', usuarioActivo.id_persona).is('contrasena', null);
+              // Solo pedimos los campos que solicitaste para Contactos
+              query = supabase
+                .from('usuarios')
+                .select('nombre, ap_pat, ap_mat, correo, num_tel') 
+                .eq('id_propietario', usuarioActivo.id_persona)
+                .is('contrasena', null);
               
-          } else if (nombreTabla === 'negocio_balance') { // <-- CORREGIDO PARA QUE ATRAPE EL BALANCE
-              if (!miIdNegocio) {
-                  mostrarError("Necesitas ser administrador de un negocio para ver este módulo.");
-                  return;
-              }
-              query = query.eq('id_negocio', miIdNegocio);
+          } else if (nombreTabla === 'negocio_balance') { 
+              // ¡ADIÓS A LOS SALTOS COMPLICADOS! 
+              // Consultamos directo usando el id_persona que ya trae la tabla
+              query = query.eq('id_persona', usuarioActivo.id_persona);
           }
 
           // Ejecutamos la consulta a Supabase ya con los filtros de seguridad correctos

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/logo1_0.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <title>M-Tec | Términos de Desarrollador</title>
+  <style>
+    .terms-box {
+      height: 300px;
+      overflow-y: scroll;
+      background-color: var(--bs-tertiary-bg);
+      border: 1px solid var(--bs-border-color);
+      padding: 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body class="bg-body d-flex flex-column min-vh-100">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark barra-navegacion shadow-sm fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand fw-bold fs-3" href="index.html">M-Tec</a>
+      <div class="d-flex justify-content-end">
+        <a href="descargas.html" class="btn btn-outline-light px-3">Cancelar</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container flex-grow-1 d-flex flex-column justify-content-center align-items-center pt-5 mt-5">
+    <div class="card shadow-lg p-4 w-100" style="max-width: 700px; border-radius: 15px;">
+      <h2 class="fw-bold text-center mb-4">Acuerdo de Uso de Código Fuente</h2>
+      
+      <p class="text-secondary small">Por favor, lee atentamente los siguientes términos antes de acceder al repositorio de CRM-Tec.</p>
+
+      <div class="terms-box mb-4">
+        <h5>1. Propiedad Intelectual</h5>
+        <p>El código fuente de CRM-Tec es propiedad exclusiva del equipo de desarrollo de M-Tec (UTTEC). Se otorga acceso con fines educativos y de revisión técnica.</p>
+        
+        <h5>2. Restricciones de Uso</h5>
+        <p>Queda estrictamente prohibida la redistribución, venta o sublicencia del código fuente sin la autorización expresa por escrito de los titulares.</p>
+        
+        <h5>3. Atribución</h5>
+        <p>Cualquier mejora o derivado basado en este código debe mantener los créditos originales de los desarrolladores de la UTTEC.</p>
+        
+        <h5>4. Responsabilidad</h5>
+        <p>M-Tec no se hace responsable del mal uso del software o de posibles fallos derivados de modificaciones realizadas por terceros.</p>
+        
+        <h5>5. Confidencialidad</h5>
+        <p>Al acceder al repositorio, el usuario se compromete a no divulgar claves de API, secretos de entorno o estructuras sensibles que puedan comprometer la seguridad de la red CRM-Tec.</p>
+      </div>
+
+      <div class="form-check mb-4">
+        <input class="form-check-input" type="checkbox" id="checkAcepto">
+        <label class="form-check-label fw-bold" for="checkAcepto">
+          He leído y acepto los términos y condiciones de desarrollo.
+        </label>
+      </div>
+
+      <button id="btnFinal" class="btn btn-dark btn-lg w-100 fw-bold disabled">
+        Continuar al Repositorio 🚀
+      </button>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const checkbox = document.getElementById('checkAcepto');
+      const btnFinal = document.getElementById('btnFinal');
+      const sesionIniciada = localStorage.getItem('usuarioMNet');
+
+      // Seguridad: Si alguien entra directo al link sin loguearse, lo sacamos
+      if (!sesionIniciada) {
+        window.location.href = 'login.html';
+      }
+
+      // Habilitar/Deshabilitar botón según el checkbox
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          btnFinal.classList.remove('disabled');
+        } else {
+          btnFinal.classList.add('disabled');
+        }
+      });
+
+      // Acción final
+      btnFinal.addEventListener('click', () => {
+        if (!btnFinal.classList.contains('disabled')) {
+          // Aquí va tu link real de GitHub
+          window.location.href = 'https://github.com/ian-daniel-vera-hernandez/M-tech';
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  (function() {
+    // ⚠️ REEMPLAZA CON TU CLAVE PÚBLICA DE EMAILJS
+    emailjs.init("kjsVDSfSzB1XGWtHJ");
+  })();
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const checkbox = document.getElementById('checkAcepto');
+    const btnFinal = document.getElementById('btnFinal');
+    
+    // Recuperamos los datos del usuario de la sesión
+    const datosUsuario = JSON.parse(localStorage.getItem('usuarioMNet'));
+
+    if (!datosUsuario) {
+      window.location.href = 'login.html';
+      return;
+    }
+
+    checkbox.addEventListener('change', () => {
+      btnFinal.classList.toggle('disabled', !checkbox.checked);
+    });
+
+   btnFinal.addEventListener('click', async () => {
+      if (btnFinal.classList.contains('disabled')) return;
+
+      btnFinal.innerHTML = `<span class="spinner-border spinner-border-sm"></span> Validando accesos...`;
+      btnFinal.classList.add('disabled');
+
+      const templateParams = {
+        nombre: datosUsuario.nombre || "Usuario M-Net",
+        correo: datosUsuario.correo, // EmailJS usará esto para saber a quién enviarle el segundo correo
+        id: datosUsuario.id_persona,
+        proyecto: "CRM-Tec (Repositorio Oficial)",
+        fecha: new Date().toLocaleString()
+      };
+
+      try {
+        // 1. ENVIAR CORREO DE AUDITORÍA (A mtecassistance@gmail.com)
+        const sendAudit = emailjs.send('service_rspqdd8', 'template_xxjkml4', templateParams);
+
+        // 2. ENVIAR CORREO DE CONFIRMACIÓN (Al cliente)
+        const sendConfirmation = emailjs.send('service_rspqdd8', 'template_wt6r02c', templateParams);
+
+        // Esperamos a que ambos correos se envíen
+        await Promise.all([sendAudit, sendConfirmation]);
+        
+        console.log("Correos enviados con éxito.");
+        
+        // REDIRECCIÓN FINAL
+        window.location.href = 'https://github.com/ian-daniel-vera-hernandez/M-tech';
+
+      } catch (error) {
+        console.error("Error en el sistema de correos:", error);
+        alert("Lo sentimos, hubo un error al procesar la solicitud. Intenta de nuevo.");
+        btnFinal.innerHTML = "Continuar al Repositorio 🚀";
+        btnFinal.classList.remove('disabled');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

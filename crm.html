@@ -13,22 +13,33 @@
   <nav class="navbar navbar-expand-lg navbar-dark barra-navegacion shadow-sm fixed-top">
     <div class="container-fluid px-4">
       <a class="navbar-brand fw-bold fs-3" href="index.html">M-Tec</a>
-      
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false"
+        aria-label="Alternar navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="menuNavegacion">
         <div class="d-flex gap-3 align-items-center flex-column flex-lg-row">
           <a href="index.html" class="btn btn-outline-light w-100 text-center">Inicio</a>
-          <a href="crm.html" class="btn btn-light fw-bold text-primary shadow-sm w-100 text-center">CRM-Tec</a>
-          
-          <button class="btn btn-link text-white p-0 ms-lg-2 mt-2 mt-lg-0" id="bd-theme-toggle" type="button" aria-expanded="false" aria-label="Cambiar tema">
+          <a href="descargas.html" class="btn btn-outline-info fw-bold px-4 py-1 shadow-sm" style="font-size: 0.9rem;"> 📥 Descargar
+          </a>
+
+           
+          <div id="authContainer" class="d-flex justify-content-center">
+            <a href="login.html" class="btn btn-warning fw-bold text-dark text-center shadow-sm px-4" style="min-width: 140px;">Iniciar Sesión</a>
+          </div>
+          <button class="btn btn-link text-white p-0 ms-lg-2 mt-2 mt-lg-0" id="bd-theme-toggle" type="button"
+            aria-expanded="false" aria-label="Cambiar tema">
             <svg class="bi theme-icon-active icono-luna" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.218 7.277a7.15 7.15 0 0 0 3.06-.683.768.768 0 0 1 .888.162 7.12 7.12 0 0 1 1.574 3.03.768.768 0 0 1-.81 1.002A11.305 11.305 0 0 1 7.23 16C3.237 16 0 12.763 0 8.77 0 4.91 3.105 1.766 7.02.484a.768.768 0 0 1 .18-.016zm.41 1.48A9.33 9.33 0 0 0 5 8.77c0 2.398.9 4.587 2.37 6.242A10.317 10.317 0 0 0 10.7 13.5a8.216 8.216 0 0 1-3.665-.877c-2.112-1.225-3.56-3.47-3.56-5.853 0-2.26.835-4.33 2.212-5.91zm0 0z"/>
+              <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.218 7.277a7.15 7.15 0 0 0 3.06-.683.768.768 0 0 1 .888.162 7.12 7.12 0 0 1 1.574 3.03.768.768 0 0 1-.81 1.002A11.305 11.305 0 0 1 7.23 16C3.237 16 0 12.763 0 8.77 0 4.91 3.105 1.766 7.02.484a.768.768 0 0 1 .18-.016zm.41 1.48A9.33 9.33 0 0 0 5 8.77c0 2.398.9 4.587 2.37 6.242A10.317 10.317 0 0 0 10.7 13.5a8.216 8.216 0 0 1-3.665-.877c-2.112-1.225-3.56-3.47-3.56-5.853 0-2.26.835-4.33 2.212-5.91zm0 0z" />
             </svg>
-            <svg class="bi d-none theme-icon-active icono-sol" width="24" height="24" fill="#F5A623" viewBox="0 0 16 16">
-              <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2a.5.5 0 0 1 .5-.5zM11.778 3.32a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L11.778 3.32zm-7.356 8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707l-1.414-1.414a.5.5 0 0 1 0-.707zm5.558 0a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L9.98 11.88zm-7.356-8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.624 3.32zm13.376 4.68a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm-15 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
+            <svg class="bi d-none theme-icon-active icono-sol" width="24" height="24" fill="#F5A623"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2a.5.5 0 0 1 .5-.5zM11.778 3.32a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L11.778 3.32zm-7.356 8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707l-1.414-1.414a.5.5 0 0 1 0-.707zm5.558 0a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L9.98 11.88zm-7.356-8.56a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.624 3.32zm13.376 4.68a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm-15 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z" />
             </svg>
           </button>
         </div>
@@ -36,15 +47,32 @@
     </div>
   </nav>
 
+  <div class="anuncio-estreno shadow-sm">
+    <div class="marquee-text">
+      🚀 ¡EL FUTURO DE LA GESTIÓN ESTÁ AQUÍ! &nbsp;&nbsp; • &nbsp;&nbsp;
+      <b>GRAN ESTRENO DE CRM-Tec: 8 DE ABRIL, 2026</b> &nbsp;&nbsp; • &nbsp;&nbsp;
+      DISPONIBLE PARA TODO EL PÚBLICO &nbsp;&nbsp; • &nbsp;&nbsp;
+      ¡PREPÁRATE PARA TRANSFORMAR TU NEGOCIO CON M-Tec! &nbsp;&nbsp; • &nbsp;&nbsp;
+      ¡ÚNICAMENTE EN LAS EXPO INTEGRADORAS DEL EDIFICIO C 🖥️! &nbsp;&nbsp; • &nbsp;&nbsp;
+      ¡DI LA PALABRA "BEBOTE" Y TE DAMOS UNA RECOMPENSA EN EL STAND DE M-TEC! &nbsp;&nbsp; • &nbsp;&nbsp;  
+      🚀 ¡EL FUTURO DE LA GESTIÓN ESTÁ AQUÍ!
+    </div>
+  </div>
+
   <main class="container-fluid p-0 pt-5 mt-3">
-    
+
     <div class="row g-0 contenedor1 border-bottom">
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
-        <span class="badge bg-warning text-dark mb-3 px-3 py-2 fs-6 rounded-pill shadow-sm">Proyecto de Desarrollo</span>
-        <h1 class="display-4 fw-bold mb-4 w-100 fs-2 fs-md-1"><span class="texto-destacado">CRM-Tec:</span> Conecta con tus clientes</h1>
-        
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
+        <span class="badge bg-warning text-dark mb-3 px-3 py-2 fs-6 rounded-pill shadow-sm">Proyecto de
+          Desarrollo</span>
+        <h1 class="display-4 fw-bold mb-4 w-100 fs-2 fs-md-1"><span class="texto-destacado">CRM-Tec:</span> Conecta con
+          tus clientes</h1>
+
         <p class="fs-5 text-secondary lh-lg mb-4">
-          La herramienta definitiva de código abierto (Open Source) diseñada para democratizar el acceso a la tecnología para las PyMEs. Centraliza tu contabilidad, administra tus recursos y brinda una atención al cliente excepcional en una plataforma de escritorio intuitiva y ágil.
+          La herramienta definitiva de código abierto (Open Source) diseñada para democratizar el acceso a la tecnología
+          para las PyMEs. Centraliza tu contabilidad, administra tus recursos y brinda una atención al cliente
+          excepcional en una plataforma de escritorio intuitiva y ágil.
         </p>
         <p class="fs-5 fw-bold w-100" style="color: #1B2A6D;">
           Versión final disponible a partir del 9 de mayo.
@@ -52,51 +80,57 @@
       </div>
 
       <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-4 p-md-5">
-       <div class="card bg-dark text-white border-0 shadow-lg w-100" style="border-radius: 1rem; max-width: 600px;">
-  <div class="card-body text-center p-4 p-md-5">
-    
-    <h2 class="card-title fw-bold mb-4 fs-3 fs-md-2">Da el siguiente paso hacía el futuro.</h2>
-    
-    <div id="carruselCRM" class="carousel slide carousel-fade rounded overflow-hidden" data-bs-ride="carousel" data-bs-pause="false">
-      
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carruselCRM" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Pantalla 1"></button>
-        <button type="button" data-bs-target="#carruselCRM" data-bs-slide-to="1" aria-label="Pantalla 2"></button>
-        <button type="button" data-bs-target="#carruselCRM" data-bs-slide-to="2" aria-label="Pantalla 3"></button>
-        <button type="button" data-bs-target="#carruselCRM" data-bs-slide-to="3" aria-label="Pantalla 4"></button>
-        <button type="button" data-bs-target="#carruselCRM" data-bs-slide-to="4" aria-label="Pantalla 5"></button>
-      </div>
+        <div class="card bg-dark text-white border-0 shadow-lg w-100" style="border-radius: 1rem; max-width: 600px;">
+          <div class="card-body text-center p-4 p-md-5">
 
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="3000">
-          <img src="assets/img/AgendaM-Tec.jpeg" class="d-block w-100" alt="Módulo de Agenda">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="assets/img/Grafica_Mtec.jpeg" class="d-block w-100" alt="Módulo de Balance">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="assets/img/MAI.jpeg" class="d-block w-100" alt="Asistente Virtual MAI">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="assets/img/tareasM-Tec.jpeg" class="d-block w-100" alt="Módulo de Tareas">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="assets/img/inventarioM-Tec.jpeg" class="d-block w-100" alt="Módulo de Inventario">
-        </div>
-      </div>
+            <h2 class="card-title fw-bold mb-4 fs-3 fs-md-2">Da el siguiente paso hacía el futuro.</h2>
 
-      <button class="carousel-control-prev" type="button" data-bs-target="#carruselCRM" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carruselCRM" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
+            <div id="carruselCRM" class="carousel slide carousel-fade rounded overflow-hidden" data-bs-ride="carousel"
+              data-bs-pause="false">
 
-    </div>
-  </div>
-</div>
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carruselCRM" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Pantalla 1"></button>
+                <button type="button" data-bs-target="#carruselCRM" data-bs-slide-to="1"
+                  aria-label="Pantalla 2"></button>
+                <button type="button" data-bs-target="#carruselCRM" data-bs-slide-to="2"
+                  aria-label="Pantalla 3"></button>
+                <button type="button" data-bs-target="#carruselCRM" data-bs-slide-to="3"
+                  aria-label="Pantalla 4"></button>
+                <button type="button" data-bs-target="#carruselCRM" data-bs-slide-to="4"
+                  aria-label="Pantalla 5"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="assets/img/AgendaM-Tec.jpeg" class="d-block w-100" alt="Módulo de Agenda">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="assets/img/Grafica_Mtec.jpeg" class="d-block w-100" alt="Módulo de Balance">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="assets/img/MAI.jpeg" class="d-block w-100" alt="Asistente Virtual MAI">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="assets/img/tareasM-Tec.jpeg" class="d-block w-100" alt="Módulo de Tareas">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="assets/img/inventarioM-Tec.jpeg" class="d-block w-100" alt="Módulo de Inventario">
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carruselCRM" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carruselCRM" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -107,18 +141,23 @@
     </div>
 
     <div class="row g-0 contenedor-paso border-bottom">
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
         <h3 class="fw-bold mb-3 texto-destacado">Gestión de Contactos</h3>
         <p class="fs-5 text-secondary lh-lg mb-0">
-          Mantén toda la información de tus clientes, proveedores y empleados centralizada. Accede rápidamente a los perfiles, filtra por ocupación y envía correos electrónicos directamente desde la aplicación para mantener una comunicación fluida y sin errores humanos.
+          Mantén toda la información de tus clientes, proveedores y empleados centralizada. Accede rápidamente a los
+          perfiles, filtra por ocupación y envía correos electrónicos directamente desde la aplicación para mantener una
+          comunicación fluida y sin errores humanos.
         </p>
       </div>
       <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-4 p-md-5">
-        <div class="card bg-dark text-white border-0 shadow-lg" style="border-radius: 1rem; max-width: 400px; width: 100%;">
+        <div class="card bg-dark text-white border-0 shadow-lg"
+          style="border-radius: 1rem; max-width: 400px; width: 100%;">
           <div class="card-body text-center p-4 p-md-5">
             <div class="mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" class="icono-paso" fill="#F5A623" viewBox="0 0 16 16">
-                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" class="icono-paso" fill="#F5A623"
+                viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
               </svg>
             </div>
             <h4 class="card-title fw-bold mb-0">Directorio Inteligente</h4>
@@ -129,39 +168,52 @@
 
     <div class="row g-0 contenedor-paso border-bottom flex-column-reverse flex-md-row">
       <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-4 p-md-5">
-        <div class="card bg-dark text-white border-0 shadow-lg" style="border-radius: 1rem; max-width: 400px; width: 100%;">
+        <div class="card bg-dark text-white border-0 shadow-lg"
+          style="border-radius: 1rem; max-width: 400px; width: 100%;">
           <div class="card-body text-center p-4 p-md-5">
             <div class="mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" class="icono-paso" fill="#F5A623" viewBox="0 0 16 16">
-                <path d="M12.5 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm0 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm.5 3.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-6.5 2a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0 0 1h1a.5.5 0 0 0 .5-.5z"/>
-                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" class="icono-paso" fill="#F5A623"
+                viewBox="0 0 16 16">
+                <path
+                  d="M12.5 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm0 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm.5 3.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-6.5 2a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0 0 1h1a.5.5 0 0 0 .5-.5z" />
+                <path
+                  d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
               </svg>
             </div>
             <h4 class="card-title fw-bold mb-0">Productividad Total</h4>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
         <h3 class="fw-bold mb-3 texto-destacado">Control de Tareas e Inventario</h3>
         <p class="fs-5 text-secondary lh-lg mb-0">
-          Gestiona las actividades diarias de tu equipo con nuestra agenda de tareas. Asigna responsables, establece fechas límite y monitorea los niveles de tu inventario en tiempo real para evitar la escasez de productos o el olvido de pedidos críticos.
+          Gestiona las actividades diarias de tu equipo con nuestra agenda de tareas. Asigna responsables, establece
+          fechas límite y monitorea los niveles de tu inventario en tiempo real para evitar la escasez de productos o el
+          olvido de pedidos críticos.
         </p>
       </div>
     </div>
 
     <div class="row g-0 contenedor-paso">
-      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
+      <div
+        class="col-12 col-md-6 d-flex justify-content-center align-items-center align-items-md-start flex-column p-4 p-md-5 bg-body text-center text-md-start">
         <h3 class="fw-bold mb-3 texto-destacado">Panel de Control e IA</h3>
         <p class="fs-5 text-secondary lh-lg mb-0">
-          Transforma registros contables complejos en gráficas fáciles de interpretar. Además, cuenta con un Asistente Virtual impulsado por Inteligencia Artificial para brindarte soporte financiero interactivo basado en las normativas actuales.
+          Transforma registros contables complejos en gráficas fáciles de interpretar. Además, cuenta con un Asistente
+          Virtual impulsado por Inteligencia Artificial para brindarte soporte financiero interactivo basado en las
+          normativas actuales.
         </p>
       </div>
       <div class="col-12 col-md-6 divIzq d-flex justify-content-center align-items-center p-4 p-md-5">
-        <div class="card bg-dark text-white border-0 shadow-lg" style="border-radius: 1rem; max-width: 400px; width: 100%;">
+        <div class="card bg-dark text-white border-0 shadow-lg"
+          style="border-radius: 1rem; max-width: 400px; width: 100%;">
           <div class="card-body text-center p-4 p-md-5">
             <div class="mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" class="icono-paso" fill="#F5A623" viewBox="0 0 16 16">
-                <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.889a5.22 5.22 0 0 1 3.928 2.769 4.368 4.368 0 0 0 2.426 1.76c1.081.24 1.616 1.498 1.156 2.476l-.283.605a.5.5 0 0 1-.453.284h-8.6a.5.5 0 0 1-.453-.284l-.283-.605C2.502 11.92 3 10.662 4.081 10.422a4.368 4.368 0 0 0 2.426-1.76 5.22 5.22 0 0 1 3.928-2.769Z"/>
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" class="icono-paso" fill="#F5A623"
+                viewBox="0 0 16 16">
+                <path
+                  d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5ZM3 8.062C3 6.76 4.235 5.765 5.53 5.889a5.22 5.22 0 0 1 3.928 2.769 4.368 4.368 0 0 0 2.426 1.76c1.081.24 1.616 1.498 1.156 2.476l-.283.605a.5.5 0 0 1-.453.284h-8.6a.5.5 0 0 1-.453-.284l-.283-.605C2.502 11.92 3 10.662 4.081 10.422a4.368 4.368 0 0 0 2.426-1.76 5.22 5.22 0 0 1 3.928-2.769Z" />
               </svg>
             </div>
             <h4 class="card-title fw-bold mb-0">Asistente Financiero</h4>
@@ -174,23 +226,29 @@
       <div class="col-12 text-center p-4 p-md-5">
         <h2 class="display-5 fw-bold text-white mb-3 fs-2 fs-md-1">Arquitectura y Tecnología</h2>
         <p class="fs-5 text-light opacity-75 mb-5 mx-auto" style="max-width: 800px;">
-          CRM-Tec está construido bajo un enfoque "Cloud-Native", garantizando escalabilidad, integridad de datos y un rendimiento óptimo incluso ante fallas de hardware.
+          CRM-Tec está construido bajo un enfoque "Cloud-Native", garantizando escalabilidad, integridad de datos y un
+          rendimiento óptimo incluso ante fallas de hardware.
         </p>
-        
+
         <div class="row justify-content-center gap-4 px-3">
           <div class="col-12 col-md-3 card bg-dark text-white border-0 shadow p-4" style="border-radius: 1rem;">
             <h4 class="fw-bold mb-3" style="color: #F5A623;">Front-End</h4>
-            <p class="text-light opacity-75 mb-0">Interfaz gráfica de escritorio moderna, intuitiva y visualmente atractiva desarrollada con <strong>JavaFX</strong>, <strong>Scene Builder</strong> y hojas de estilo CSS.</p>
+            <p class="text-light opacity-75 mb-0">Interfaz gráfica de escritorio moderna, intuitiva y visualmente
+              atractiva desarrollada con <strong>JavaFX</strong>, <strong>Scene Builder</strong> y hojas de estilo CSS.
+            </p>
           </div>
-          
+
           <div class="col-12 col-md-3 card bg-dark text-white border-0 shadow p-4" style="border-radius: 1rem;">
             <h4 class="fw-bold mb-3" style="color: #F5A623;">Back-End</h4>
-            <p class="text-light opacity-75 mb-0">Lógica de negocios robusta y orientada a objetos programada nativamente en <strong>Java</strong>, procesando grandes volúmenes de datos e integrando modelos de Inteligencia Artificial.</p>
+            <p class="text-light opacity-75 mb-0">Lógica de negocios robusta y orientada a objetos programada
+              nativamente en <strong>Java</strong>, procesando grandes volúmenes de datos e integrando modelos de
+              Inteligencia Artificial.</p>
           </div>
 
           <div class="col-12 col-md-3 card bg-dark text-white border-0 shadow p-4" style="border-radius: 1rem;">
             <h4 class="fw-bold mb-3" style="color: #F5A623;">Base de Datos</h4>
-            <p class="text-light opacity-75 mb-0">Persistencia de datos segura, relacional y disponible en la nube mediante los servicios de <strong>Supabase</strong> corriendo sobre <strong>PostgreSQL</strong>.</p>
+            <p class="text-light opacity-75 mb-0">Persistencia de datos segura, relacional y disponible en la nube
+              mediante los servicios de <strong>Supabase</strong> corriendo sobre <strong>PostgreSQL</strong>.</p>
           </div>
         </div>
       </div>
@@ -199,17 +257,23 @@
       <div class="col-12 text-center p-4 p-md-5">
         <h2 class="display-6 fw-bold text-body mb-3 fs-2 fs-md-1">Documentación del Proyecto</h2>
         <p class="fs-5 text-secondary mb-5 mx-auto" style="max-width: 700px;">
-          Descarga los documentos oficiales de CRM-Tec para conocer a fondo nuestra investigación, requerimientos y manuales de uso.
+          Descarga los documentos oficiales de CRM-Tec para conocer a fondo nuestra investigación, requerimientos y
+          manuales de uso.
         </p>
-        
+
         <div class="row justify-content-center gap-4 gap-md-0 px-3 mx-auto" style="max-width: 1000px;">
-          
+
           <div class="col-12 col-md-4 px-2 mb-3 mb-md-0">
-            <a href="assets/pdf/Reporte Técnico.pdf" download="Reporte_Tecnico_CRMTec.pdf" target="_blank" class="card text-decoration-none shadow-sm doc-hover h-100 p-4 border bg-body" style="border-radius: 1rem;">
+            <a href="assets/pdf/Reporte Técnico.pdf" download="Reporte_Tecnico_CRMTec.pdf" target="_blank"
+              class="card text-decoration-none shadow-sm doc-hover h-100 p-4 border bg-body"
+              style="border-radius: 1rem;">
               <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#e21111" class="bi bi-file-earmark-pdf-fill mb-3" viewBox="0 0 16 16">
-                  <path d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.148 21.148 0 0 0 .5-1.05 12.045 12.045 0 0 0 .51.858c-.217.032-.436.07-.654.114zm2.525.939a3.881 3.881 0 0 1-.435-.41c.228.005.434.022.568.031.243.027.279.062.292.088.036.067.017.13-.04.19-.088.092-.253.146-.385.101zm-3.415-4.414c-.09-.158-.171-.32-.24-.486-.062-.15-.098-.284-.108-.387-.01-.104.015-.178.083-.223.064-.043.14-.055.22-.036.104.032.19.102.25.215.061.114.095.25.09.398-.006.148-.04.305-.09.467a14.288 14.288 0 0 1-.205.552z"/>
-                  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.293 4L9.293 0zM9.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.385 11.53c-.35.195-.653.42-.876.666-.34.375-.515.717-.46 1.05.05.332.295.589.691.589.4 0 .75-.24 1.1-.64.33-.377.58-.813.75-1.312a14.618 14.618 0 0 1 2.22-.72c.45-.147.88-.27 1.28-.352.36-.073.72-.11 1.05-.11.45 0 .82.09 1.08.27.28.18.45.42.48.74.03.32-.08.61-.31.81-.23.2-.55.3-.92.3-.4 0-.85-.15-1.33-.44a7.99 7.99 0 0 1-1.55-1.28c-.41.05-.82.1-1.24.16a20.08 20.08 0 0 1-2.42.16c-.4 0-.8-.03-1.2-.1a12.18 12.18 0 0 1-1.3-.32z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#e21111"
+                  class="bi bi-file-earmark-pdf-fill mb-3" viewBox="0 0 16 16">
+                  <path
+                    d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.148 21.148 0 0 0 .5-1.05 12.045 12.045 0 0 0 .51.858c-.217.032-.436.07-.654.114zm2.525.939a3.881 3.881 0 0 1-.435-.41c.228.005.434.022.568.031.243.027.279.062.292.088.036.067.017.13-.04.19-.088.092-.253.146-.385.101zm-3.415-4.414c-.09-.158-.171-.32-.24-.486-.062-.15-.098-.284-.108-.387-.01-.104.015-.178.083-.223.064-.043.14-.055.22-.036.104.032.19.102.25.215.061.114.095.25.09.398-.006.148-.04.305-.09.467a14.288 14.288 0 0 1-.205.552z" />
+                  <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.293 4L9.293 0zM9.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.385 11.53c-.35.195-.653.42-.876.666-.34.375-.515.717-.46 1.05.05.332.295.589.691.589.4 0 .75-.24 1.1-.64.33-.377.58-.813.75-1.312a14.618 14.618 0 0 1 2.22-.72c.45-.147.88-.27 1.28-.352.36-.073.72-.11 1.05-.11.45 0 .82.09 1.08.27.28.18.45.42.48.74.03.32-.08.61-.31.81-.23.2-.55.3-.92.3-.4 0-.85-.15-1.33-.44a7.99 7.99 0 0 1-1.55-1.28c-.41.05-.82.1-1.24.16a20.08 20.08 0 0 1-2.42.16c-.4 0-.8-.03-1.2-.1a12.18 12.18 0 0 1-1.3-.32z" />
                 </svg>
                 <span class="fs-5 fw-bold text-body">Reporte Técnico</span>
                 <span class="badge bg-secondary mt-2">Documento PDF</span>
@@ -218,11 +282,16 @@
           </div>
 
           <div class="col-12 col-md-4 px-2 mb-3 mb-md-0">
-            <a href="assets/pdf/Manual de usuario CRM-Tec.pdf" download="Manual_Usuario_CRMTec.pdf" target="_blank" class="card text-decoration-none shadow-sm doc-hover h-100 p-4 border bg-body" style="border-radius: 1rem;">
+            <a href="assets/pdf/Manual de usuario CRM-Tec.pdf" download="Manual_Usuario_CRMTec.pdf" target="_blank"
+              class="card text-decoration-none shadow-sm doc-hover h-100 p-4 border bg-body"
+              style="border-radius: 1rem;">
               <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#e21111" class="bi bi-file-earmark-pdf-fill mb-3" viewBox="0 0 16 16">
-                  <path d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.148 21.148 0 0 0 .5-1.05 12.045 12.045 0 0 0 .51.858c-.217.032-.436.07-.654.114zm2.525.939a3.881 3.881 0 0 1-.435-.41c.228.005.434.022.568.031.243.027.279.062.292.088.036.067.017.13-.04.19-.088.092-.253.146-.385.101zm-3.415-4.414c-.09-.158-.171-.32-.24-.486-.062-.15-.098-.284-.108-.387-.01-.104.015-.178.083-.223.064-.043.14-.055.22-.036.104.032.19.102.25.215.061.114.095.25.09.398-.006.148-.04.305-.09.467a14.288 14.288 0 0 1-.205.552z"/>
-                  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.293 4L9.293 0zM9.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.385 11.53c-.35.195-.653.42-.876.666-.34.375-.515.717-.46 1.05.05.332.295.589.691.589.4 0 .75-.24 1.1-.64.33-.377.58-.813.75-1.312a14.618 14.618 0 0 1 2.22-.72c.45-.147.88-.27 1.28-.352.36-.073.72-.11 1.05-.11.45 0 .82.09 1.08.27.28.18.45.42.48.74.03.32-.08.61-.31.81-.23.2-.55.3-.92.3-.4 0-.85-.15-1.33-.44a7.99 7.99 0 0 1-1.55-1.28c-.41.05-.82.1-1.24.16a20.08 20.08 0 0 1-2.42.16c-.4 0-.8-.03-1.2-.1a12.18 12.18 0 0 1-1.3-.32z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#e21111"
+                  class="bi bi-file-earmark-pdf-fill mb-3" viewBox="0 0 16 16">
+                  <path
+                    d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.148 21.148 0 0 0 .5-1.05 12.045 12.045 0 0 0 .51.858c-.217.032-.436.07-.654.114zm2.525.939a3.881 3.881 0 0 1-.435-.41c.228.005.434.022.568.031.243.027.279.062.292.088.036.067.017.13-.04.19-.088.092-.253.146-.385.101zm-3.415-4.414c-.09-.158-.171-.32-.24-.486-.062-.15-.098-.284-.108-.387-.01-.104.015-.178.083-.223.064-.043.14-.055.22-.036.104.032.19.102.25.215.061.114.095.25.09.398-.006.148-.04.305-.09.467a14.288 14.288 0 0 1-.205.552z" />
+                  <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.293 4L9.293 0zM9.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.385 11.53c-.35.195-.653.42-.876.666-.34.375-.515.717-.46 1.05.05.332.295.589.691.589.4 0 .75-.24 1.1-.64.33-.377.58-.813.75-1.312a14.618 14.618 0 0 1 2.22-.72c.45-.147.88-.27 1.28-.352.36-.073.72-.11 1.05-.11.45 0 .82.09 1.08.27.28.18.45.42.48.74.03.32-.08.61-.31.81-.23.2-.55.3-.92.3-.4 0-.85-.15-1.33-.44a7.99 7.99 0 0 1-1.55-1.28c-.41.05-.82.1-1.24.16a20.08 20.08 0 0 1-2.42.16c-.4 0-.8-.03-1.2-.1a12.18 12.18 0 0 1-1.3-.32z" />
                 </svg>
                 <span class="fs-5 fw-bold text-body">Manual de Usuario</span>
                 <span class="badge bg-secondary mt-2">Documento PDF</span>
@@ -231,11 +300,16 @@
           </div>
 
           <div class="col-12 col-md-4 px-2">
-            <a href="assets/pdf/Manual Tecnico.pdf" download="Presentacion_CRMTec.pdf" target="_blank" class="card text-decoration-none shadow-sm doc-hover h-100 p-4 border bg-body" style="border-radius: 1rem;">
+            <a href="assets/pdf/Manual Tecnico.pdf" download="Presentacion_CRMTec.pdf" target="_blank"
+              class="card text-decoration-none shadow-sm doc-hover h-100 p-4 border bg-body"
+              style="border-radius: 1rem;">
               <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#e21111" class="bi bi-file-earmark-pdf-fill mb-3" viewBox="0 0 16 16">
-                  <path d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.148 21.148 0 0 0 .5-1.05 12.045 12.045 0 0 0 .51.858c-.217.032-.436.07-.654.114zm2.525.939a3.881 3.881 0 0 1-.435-.41c.228.005.434.022.568.031.243.027.279.062.292.088.036.067.017.13-.04.19-.088.092-.253.146-.385.101zm-3.415-4.414c-.09-.158-.171-.32-.24-.486-.062-.15-.098-.284-.108-.387-.01-.104.015-.178.083-.223.064-.043.14-.055.22-.036.104.032.19.102.25.215.061.114.095.25.09.398-.006.148-.04.305-.09.467a14.288 14.288 0 0 1-.205.552z"/>
-                  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.293 4L9.293 0zM9.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.385 11.53c-.35.195-.653.42-.876.666-.34.375-.515.717-.46 1.05.05.332.295.589.691.589.4 0 .75-.24 1.1-.64.33-.377.58-.813.75-1.312a14.618 14.618 0 0 1 2.22-.72c.45-.147.88-.27 1.28-.352.36-.073.72-.11 1.05-.11.45 0 .82.09 1.08.27.28.18.45.42.48.74.03.32-.08.61-.31.81-.23.2-.55.3-.92.3-.4 0-.85-.15-1.33-.44a7.99 7.99 0 0 1-1.55-1.28c-.41.05-.82.1-1.24.16a20.08 20.08 0 0 1-2.42.16c-.4 0-.8-.03-1.2-.1a12.18 12.18 0 0 1-1.3-.32z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#e21111"
+                  class="bi bi-file-earmark-pdf-fill mb-3" viewBox="0 0 16 16">
+                  <path
+                    d="M5.523 12.424c.14-.082.293-.162.459-.238a7.878 7.878 0 0 1-.45.606c-.28.337-.498.516-.635.572a.266.266 0 0 1-.035.012.282.282 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548zm2.455-1.647c-.119.025-.237.05-.356.078a21.148 21.148 0 0 0 .5-1.05 12.045 12.045 0 0 0 .51.858c-.217.032-.436.07-.654.114zm2.525.939a3.881 3.881 0 0 1-.435-.41c.228.005.434.022.568.031.243.027.279.062.292.088.036.067.017.13-.04.19-.088.092-.253.146-.385.101zm-3.415-4.414c-.09-.158-.171-.32-.24-.486-.062-.15-.098-.284-.108-.387-.01-.104.015-.178.083-.223.064-.043.14-.055.22-.036.104.032.19.102.25.215.061.114.095.25.09.398-.006.148-.04.305-.09.467a14.288 14.288 0 0 1-.205.552z" />
+                  <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.293 4L9.293 0zM9.5 1.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.385 11.53c-.35.195-.653.42-.876.666-.34.375-.515.717-.46 1.05.05.332.295.589.691.589.4 0 .75-.24 1.1-.64.33-.377.58-.813.75-1.312a14.618 14.618 0 0 1 2.22-.72c.45-.147.88-.27 1.28-.352.36-.073.72-.11 1.05-.11.45 0 .82.09 1.08.27.28.18.45.42.48.74.03.32-.08.61-.31.81-.23.2-.55.3-.92.3-.4 0-.85-.15-1.33-.44a7.99 7.99 0 0 1-1.55-1.28c-.41.05-.82.1-1.24.16a20.08 20.08 0 0 1-2.42.16c-.4 0-.8-.03-1.2-.1a12.18 12.18 0 0 1-1.3-.32z" />
                 </svg>
                 <span class="fs-5 fw-bold text-body">Manual técnico</span>
                 <span class="badge bg-secondary mt-2">Documento PDF</span>
@@ -249,8 +323,9 @@
 
     <footer class="bg-dark text-white text-center py-4">
       <div class="container px-3">
-          <p class="mb-1 fw-bold fs-5" style="color: #F5A623;">M-Tec &copy; 2026</p>
-          <small class="text-light opacity-75 d-block">Proyecto Integrador II desarrollado por Cristian, Eduardo, Irvin, Alexis e Ian para la UTTEC.</small>
+        <p class="mb-1 fw-bold fs-5" style="color: #F5A623;">M-Tec &copy; 2026</p>
+        <small class="text-light opacity-75 d-block">Proyecto Integrador II desarrollado por Cristian, Eduardo, Irvin,
+          Alexis e Ian para la UTTEC.</small>
       </div>
     </footer>
 
@@ -258,6 +333,44 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/theme.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const authContainer = document.getElementById('authContainer');
+      const usuarioGuardado = localStorage.getItem('usuarioMNet');
+
+      if (usuarioGuardado) {
+        const usuario = JSON.parse(usuarioGuardado);
+        const nombreMostrar = usuario.nombre || usuario.correo.split('@')[0];
+
+        // Mismo Dropdown que en Index
+        authContainer.innerHTML = `
+          <div class="dropdown w-100 text-center">
+            <button class="btn btn-success dropdown-toggle fw-bold w-100 shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="min-width: 140px;">
+               Bienvenid@, ${nombreMostrar}
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end w-100 text-center shadow">
+              <li><h6 class="dropdown-header">Mi Cuenta M-Net</h6></li>
+              <li><a class="dropdown-item" href="panel.html">Ir al Panel</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger fw-bold" href="#" id="btnLogout">Cerrar Sesión</a></li>
+            </ul>
+          </div>
+        `;
+
+        document.getElementById('btnLogout').addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('usuarioMNet');
+          window.location.reload();
+        });
+      } else {
+        // Mismo botón que en Index cuando no hay sesión
+        authContainer.innerHTML = `
+          <a href="login.html" class="btn btn-warning px-4 fw-bold text-dark shadow-sm">Iniciar Sesión</a>
+        `;
+      }
+    });
+  </script>
+
 </body>
 
 </html>

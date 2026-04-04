@@ -109,3 +109,37 @@ body {
     border-color: #F5A623 !important; /* Resalta con tu color ámbar */
     cursor: pointer;
 }
+
+/* Contenedor principal de la cinta */
+.anuncio-estreno {
+  background: linear-gradient(90deg, #007bff, #6610f2); /* Un degradado elegante */
+  color: white;
+  padding: 10px 0;
+  font-weight: bold;
+  overflow: hidden; /* Esconde lo que se sale del borde */
+  position: relative;
+  z-index: 10; /* Para que salga por encima de otros elementos */
+  margin-top: 85px; /* Ajuste para que no lo tape la navbar fixed */
+}
+
+/* El texto que se mueve */
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-animation 40s linear infinite;
+  animation-delay: -8s;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* La animación mágica */
+@keyframes marquee-animation {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Pausar al pasar el mouse para que puedan leer bien */
+.anuncio-estreno:hover .marquee-text {
+  animation-play-state: paused;
+}

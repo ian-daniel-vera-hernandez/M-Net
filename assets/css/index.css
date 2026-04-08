@@ -139,61 +139,55 @@ body {
   100% { transform: translateX(-100%); }
 }
 
+
+
 /* ==========================================
-   CARRUSEL A PRUEBA DE BALAS (IMÁGENES MIXTAS)
+   BOTÓN YOUTUBE PERSONALIZADO
+   ========================================== */
+.btn-youtube {
+  background-color: #FF0000;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto de rebote suave */
+}
+
+.btn-youtube:hover {
+  background-color: #cc0000;
+  color: #FFFFFF;
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4) !important;
+}
+
+/* ==========================================
+   CARRUSEL M-TEC: LA PANTALLA DEFINITIVA
    ========================================== */
 
-/* 1. Contenedor principal oscuro y elegante */
+/* 1. Creamos la "Pantalla" con formato de monitor 16:9 */
 #carruselCRM .carousel-inner {
-  background-color: #111318; /* Gris muy oscuro, casi negro */
-  border-radius: 1rem;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Fuerza a la caja a ser un rectángulo perfecto */
+  max-height: 75vh; /* Evita que crezca infinitamente en pantallas gigantes */
+  background-color: #111318; /* Fondo de gala */
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-/* 2. Altura fija del carrusel */
+/* 2. Obligamos a los items a usar el 100% de esa pantalla */
 #carruselCRM .carousel-item {
-  height: 75vh;
-  min-height: 550px;
-  text-align: center; /* Centrado horizontal automático */
-}
-
-/* 3. El truco maestro: Pseudo-elemento para centrado vertical perfecto */
-#carruselCRM .carousel-item::before {
-  content: '';
-  display: inline-block;
   height: 100%;
-  vertical-align: middle;
 }
 
-/* 4. Las imágenes adaptables */
-.img-carrusel-hero {
-  display: inline-block !important;
-  vertical-align: middle;
-  max-width: 90% !important;
-  max-height: 80% !important; /* Le damos un respiro extra abajo */
-  width: auto !important;
-  height: auto !important;
-  border-radius: 8px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6); 
+/* 3. Las capturas de pantalla se ajustan suavemente en el centro */
+/* 3. Las capturas de pantalla estiradas a la fuerza */
+#carruselCRM .carousel-item img {
+  width: 100%;
+  height: 100%;
   
-  /* EL TRUCO PARA SUBIRLA: Los valores negativos mueven hacia arriba */
-  transform: translateY(-40px); /* Puedes cambiar este -40px por -20px o -60px según te guste */
-}
-
-/* 5. Ajuste del cuadro de texto para que esté centrado y no estorbe */
-.backdrop-blur {
-  position: absolute;
+  /* EL SECRETO: 'fill' ignora la proporción original y estira la imagen 
+     para rellenar toda la caja, cueste lo que cueste */
+  object-fit: fill; 
   
-  /* EL TRUCO PARA SUBIR EL TEXTO: Aumentamos la distancia desde el suelo */
-  bottom: 80px; /* Antes era 25px. Si lo quieres aún más arriba, ponle 100px o 120px */
-  
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 600px;
-  background-color: rgba(17, 19, 24, 0.85) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 1.5rem;
+  /* Quitamos el padding para que la imagen toque el techo y el piso */
+  padding: 0; 
+  border-radius: 15px; /* Para que las esquinas de la foto coincidan con la caja */
 }
